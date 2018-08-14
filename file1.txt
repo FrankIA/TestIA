@@ -1,0 +1,34 @@
+c'est pas simple là 
+Salut François, 
+
+j'ai pas été à la réunion BI pour trouver le prob mais en gros je vois ou le problème se crée mais je sais pas pourquoi c'est comme ça 
+
+à cause qu'il y a 1 seul prestation santé dentaire et que l'indicateur montant du est à true et qu'on affiche pas la premiere prestation et 
+
+que la 2ième prestation est celle de 239.17 et qu'il y a un frais admissible (de 239.17), la ligne supplémentaire est créer 
+
+maintenant ça fait tu du sens ou pas.. excellente question 
+
+
+en gros ça ca vient de la méthode AfficherBenefits(writer, ligne); à la ligne 1102 du transformateur.cs 
+
+et c'est la que la duplication se fait 
+
+en fait, il call la ligne du transofrmateur 587 :
+	AfficherBlocDePrestations(dicDocument, writer, docNumber, i);
+
+et après la ligne 614 
+    AfficherBlocDePrestations(dicDocument, writer, docNumber, i); 
+
+	
+donc ça fait les 2 fois la meme chose  !!
+
+
+C'est vraiment les ligne 587 et 614 qui sont appelé qui cause la duplication 
+
+mais je sais pas si c'est prévu et si on change ça c'est quoi les effets 
+
+
+
+ 
+
