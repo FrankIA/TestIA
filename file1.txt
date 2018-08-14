@@ -1,4 +1,4 @@
-c'est pas simple là 
+﻿c'est pas simple là 
 Salut François, 
 
 j'ai pas été à la réunion BI pour trouver le prob mais en gros je vois ou le problème se crée mais je sais pas pourquoi c'est comme ça 
@@ -28,6 +28,9 @@ C'est vraiment les ligne 587 et 614 qui sont appelé qui cause la duplication
 
 mais je sais pas si c'est prévu et si on change ça c'est quoi les effets 
 
+
+
+dd
 
 
  
